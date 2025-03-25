@@ -1,0 +1,14 @@
+[
+  {
+      "name": "王教授",
+      "photo": "assets/images/wang.jpg",
+      "school": "芝加哥大学经济学博士",
+      "tags": ["计量经济学", "STATA", "论文指导"]
+  },
+  {
+      "name": "李导师",
+      "photo": "assets/images/li.jpg",
+      "school": "伦敦政经学院硕士",
+      "tags": ["微观经济", "牛剑申请", "文书润色"]
+  }
+]

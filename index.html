@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遂愿 | 全球顶尖团队</title>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/logo.svg" alt="Logo" width="40">
+                <span class="ms-2 fw-bold text-primary">EconMasters</span>
+            </a>
+            <div class="d-none d-md-block">
+                <a href="#teachers" class="btn btn-link text-dark">导师团队</a>
+                <a href="#contact" class="btn btn-primary">免费咨询</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 封面区 -->
+    <header class="cover-section">
+        <img src="assets/images/banner.svg" 
+            alt="经济学导师封面图" 
+            class="cover-svg">
+    </header>
+
+    <!-- 教师展示 -->
+    <section id="teachers" class="container py-5">
+        <h2 class="text-center mb-5">🏅 明星导师团队</h2>
+        <div class="row g-4" id="teacherList"></div>
+    </section>
+
+    <script>
+        // 严格路径验证的数据加载
+        fetch('data/teachers.json')
+            .then(response => response.json())
+            .then(data => {
+                let html = '';
+                data.forEach(teacher => {
+                    html += `
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100">
+                                <img src="${teacher.photo}" 
+                                     class="card-img-top" 
+                                     alt="${teacher.name}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${teacher.name}</h5>
+                                    <p class="text-muted">${teacher.school}</p>
+                                    <div class="tags">${teacher.tags.map(t => 
+                                        `<span class="badge bg-primary me-1">${t}</span>`
+                                    ).join('')}</div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                document.getElementById('teacherList').innerHTML = html;
+            });
+    </script>
+</body>
+</html>
