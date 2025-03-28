@@ -1,14 +1,50 @@
 [
   {
-      "name": "王教授",
-      "photo": "assets/images/wang.jpg",
-      "school": "芝加哥大学经济学博士",
-      "tags": ["计量经济学", "STATA", "论文指导"]
+    "id": 1,
+    "name": "Monica学姐",
+    "photo": "assets/images/teachers/monica.svg",
+    "school": "墨尔本大学",
+    "tags": ["留学申请", "经济学", "论文指导"],
+    "bio": "团队创始人兼负责人，热爱经济学，目标在经济学术领域做强。曾在UC Berkeley交流、Unimelb获得BCom Hons，并担任墨大多门经济学课目的助教，拥有2年以上大班和1v1教学经验，擅长帮助学生梳理知识脉络，突破重难点。"
   },
   {
-      "name": "李导师",
-      "photo": "assets/images/li.jpg",
-      "school": "伦敦政经学院硕士",
-      "tags": ["微观经济", "牛剑申请", "文书润色"]
+    "id": 2,
+    "name": "Heunii学姐",
+    "photo": "assets/images/teachers/heunii.svg",
+    "school": "芝加哥大学经济学院",
+    "tags": ["大班教学", "1v1辅导", "经济金融"],
+    "bio": "芝加哥大学经济学院助教，墨大Dean List Top 3%，具有3年以上大班和1v1教学经验，教学经验丰富且耐心细致。"
+  },
+  {
+    "id": 3,
+    "name": "Rose学姐",
+    "photo": "assets/images/teachers/rose.svg",
+    "school": "墨尔本中教在读",
+    "tags": ["中学教学", "双语教学", "英语"],
+    "bio": "拥有澳洲多所中学实习经验，熟悉维多利亚教育体系，具备约1年的初高中1v1教学经验，支持全英或双语教学。"
+  },
+  {
+    "id": 4,
+    "name": "小新学姐",
+    "photo": "assets/images/teachers/xiaoxin.svg",
+    "school": "墨尔本数院科研",
+    "tags": ["教案设计", "理科梳理", "计量经济学"],
+    "bio": "具有一年左右大班和1v1教学经验，能根据教学内容设计教案，因材施教，擅长梳理理科知识点和总结重难点。"
+  },
+  {
+    "id": 5,
+    "name": "Vivian学姐",
+    "photo": "assets/images/teachers/vivian.svg",
+    "school": "墨尔本经济&金融本",
+    "tags": ["1v1辅导", "经济学", "金融"],
+    "bio": "具有多个学期1v1教学经验，从原理出发结合生活实例进行全方位讲解，针对学生特点制定个性化教学方案。"
+  },
+  {
+    "id": 6,
+    "name": "晨枫学长",
+    "photo": "assets/images/teachers/chenfeng.svg",
+    "school": "厦门大学",
+    "tags": ["助教", "科研指导", "人工智能"],
+    "bio": "厦门大学学科助教，拥有一年1v1教学经验，为本科及研究生提供人工智能方向的科研与项目指导，擅长整合分析知识点。"
   }
 ]

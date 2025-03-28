@@ -1,66 +1,153 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>遂愿 | 全球顶尖团队</title>
-    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>遂愿工作室 | 全球顶尖团队</title>
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar bg-white shadow-sm fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="assets/images/logo.svg" alt="Logo" width="40">
-                <span class="ms-2 fw-bold text-primary">EconMasters</span>
-            </a>
-            <div class="d-none d-md-block">
-                <a href="#teachers" class="btn btn-link text-dark">导师团队</a>
-                <a href="#contact" class="btn btn-primary">免费咨询</a>
-            </div>
+  <!-- 导航栏 -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="assets/images/logo/logo.png" alt="Logo">
+        <span class="brand-title">赋能学生成长，成就理想人生</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+         <ul class="navbar-nav ms-auto">
+           <li class="nav-item"><a class="nav-link" href="#teachers">导师团队</a></li>
+           <!-- 免费咨询链接跳转到底部 -->
+           <li class="nav-item"><a class="nav-link btn btn-primary text-white" href="#contact">免费咨询</a></li>
+         </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- 封面区 -->
+  <header class="cover-section">
+    <img src="assets/images/poster.png" alt="经济学导师封面图" class="cover-svg">
+  </header>
+  
+  <!-- 教师展示 -->
+  <section id="teachers" class="container py-5">
+    <h2 class="section-title text-center mb-5">🏅 明星导师团队</h2>
+    <div class="row g-4" id="teacherList"></div>
+  </section>
+  
+  <!-- 页脚 -->
+  <footer id="contact" class="footer">
+    <div class="container">
+      <div class="row">
+        <!-- 第一栏：工作室 logo -->
+        <div class="col-md-3 footer-section text-center">
+          <div class="footer-logo-container">
+            <img src="assets/images/logo/logo.png" alt="Logo" class="footer-logo-img">
+          </div>
         </div>
-    </nav>
+        <!-- 第二栏：了解我们 -->
+        <div class="col-md-3 footer-section">
+          <h5>了解我们</h5>
+          <ul class="footer-list">
+            <li><a href="#" class="footer-link">关于我们</a></li>
+            <li><a href="#" class="footer-link">我们的故事</a></li>
+            <li><a href="#" class="footer-link">团队介绍</a></li>
+          </ul>
+        </div>
+        <!-- 第三栏：联系我们 -->
+        <div class="col-md-3 footer-section">
+          <h5>联系我们</h5>
+          <ul class="footer-list">
+            <li>
+              <img src="assets/images/logo/email.png" alt="邮箱" class="contact-icon">
+              Suiyuan.education@gmail.com
+            </li>
+            <li>
+              <img src="assets/images/logo/phone-call.png" alt="电话" class="contact-icon">
+              +86 18760413248
+            </li>
+          </ul>
+        </div>
+        <!-- 第四栏：关注我们 -->
+        <div class="col-md-3 footer-section">
+          <h5>关注我们</h5>
+          <ul class="footer-list">
+            <li class="social-item">
+              <img src="assets/images/logo/xiaohongshu.svg" alt="小红书" class="social-icon">
+              <div class="qr-code">
+                <img src="assets/images/qr-code/xiaohongshu-qr.jpg" alt="小红书二维码">
+              </div>
+            </li>
+            <li class="social-item">
+              <img src="assets/images/logo/wechat.png" alt="微信" class="social-icon">
+              <div class="qr-code">
+                <img src="assets/images/qr-code/wechat-qr.jpg" alt="微信二维码">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 分隔线 -->
+      <hr class="footer-divider">
+      <!-- 底部版权信息 -->
+      <div class="row">
+        <div class="col-12 text-center">
+          <p>&copy; 2025 遂愿工作室. 版权所有.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  
+  <!-- 引入 Bootstrap JS -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // 加载教师数据，并生成教师卡片
+    fetch('data/teachers.json')
+      .then(response => response.json())
+      .then(data => {
+        let cardsHtml = '';
+        data.forEach((teacher, index) => {
+          teacher.id = teacher.id || index + 1;
+          cardsHtml += `
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 teacher-card" data-id="${teacher.id}">
+                <img src="${teacher.photo}" class="card-img-top" alt="${teacher.name}">
+                <div class="card-body">
+                  <h5 class="card-title">${teacher.name}</h5>
+                  <p class="card-text text-muted">${teacher.school}</p>
+                  <div class="tags">
+                    ${teacher.tags.map(t => `<span class="badge bg-secondary me-1">${t}</span>`).join('')}
+                  </div>
+                  <div class="extra-info" style="display: none; margin-top: 10px;">
+                    ${teacher.bio ? `<p><strong>简介：</strong>${teacher.bio}</p>` : ''}
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+        document.getElementById('teacherList').innerHTML = cardsHtml;
 
-    <!-- 封面区 -->
-    <header class="cover-section">
-        <img src="assets/images/banner.svg" 
-            alt="经济学导师封面图" 
-            class="cover-svg">
-    </header>
-
-    <!-- 教师展示 -->
-    <section id="teachers" class="container py-5">
-        <h2 class="text-center mb-5">🏅 明星导师团队</h2>
-        <div class="row g-4" id="teacherList"></div>
-    </section>
-
-    <script>
-        // 严格路径验证的数据加载
-        fetch('data/teachers.json')
-            .then(response => response.json())
-            .then(data => {
-                let html = '';
-                data.forEach(teacher => {
-                    html += `
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card h-100">
-                                <img src="${teacher.photo}" 
-                                     class="card-img-top" 
-                                     alt="${teacher.name}">
-                                <div class="card-body">
-                                    <h5 class="card-title">${teacher.name}</h5>
-                                    <p class="text-muted">${teacher.school}</p>
-                                    <div class="tags">${teacher.tags.map(t => 
-                                        `<span class="badge bg-primary me-1">${t}</span>`
-                                    ).join('')}</div>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                });
-                document.getElementById('teacherList').innerHTML = html;
-            });
-    </script>
+        // 点击卡片时切换额外信息显示（展开/收起）
+        document.querySelectorAll('.teacher-card').forEach(card => {
+          card.addEventListener('click', function() {
+            const extraInfo = card.querySelector('.extra-info');
+            if (extraInfo.style.display === 'none') {
+              extraInfo.style.display = 'block';
+              card.classList.add('expanded');
+            } else {
+              extraInfo.style.display = 'none';
+              card.classList.remove('expanded');
+            }
+          });
+        });
+      })
+      .catch(error => console.error('加载教师数据出错：', error));
+  </script>
 </body>
 </html>

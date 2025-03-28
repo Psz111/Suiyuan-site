@@ -1,0 +1,107 @@
+[
+    {
+      "id": 1,
+      "name": "Monica学姐",
+      "photo": "assets/images/monica.png",
+      "school": "墨尔本大学",
+      "tags": ["留学申请", "经济学", "论文指导"],
+      "bio": "团队创始人兼负责人，热爱经济学，目标在经济学术领域做强。曾在UC Berkeley交流、Unimelb获得BCom Hons，并担任墨大多门经济学课目的助教，拥有2年以上大班和1v1教学经验，擅长帮助学生梳理知识脉络，突破重难点。"
+    },
+    {
+      "id": 2,
+      "name": "Heunii学姐",
+      "photo": "assets/images/heunii.png",
+      "school": "芝加哥大学经济学院",
+      "tags": ["大班教学", "1v1辅导", "经济金融"],
+      "bio": "芝加哥大学经济学院助教，墨大Dean List Top 3%，具有3年以上大班和1v1教学经验，教学经验丰富且耐心细致。"
+    },
+    {
+      "id": 3,
+      "name": "Rose学姐",
+      "photo": "assets/images/rose.png",
+      "school": "墨尔本中教在读",
+      "tags": ["中学教学", "双语教学", "英语"],
+      "bio": "拥有澳洲多所中学实习经验，熟悉维多利亚教育体系，具备约1年的初高中1v1教学经验，支持全英或双语教学。"
+    },
+    {
+      "id": 4,
+      "name": "小新学姐",
+      "photo": "assets/images/xiaoxin.png",
+      "school": "墨尔本数院科研",
+      "tags": ["教案设计", "理科梳理", "计量经济学"],
+      "bio": "具有一年左右大班和1v1教学经验，能根据教学内容设计教案，因材施教，擅长梳理理科知识点和总结重难点。"
+    },
+    {
+      "id": 5,
+      "name": "Vivian学姐",
+      "photo": "assets/images/vivian.png",
+      "school": "墨尔本经济&金融本",
+      "tags": ["1v1辅导", "经济学", "金融"],
+      "bio": "具有多个学期1v1教学经验，从原理出发结合生活实例进行全方位讲解，针对学生特点制定个性化教学方案。"
+    },
+    {
+      "id": 6,
+      "name": "晨枫学长",
+      "photo": "assets/images/chengfeng.png",
+      "school": "厦门大学",
+      "tags": ["助教", "科研指导", "人工智能"],
+      "bio": "厦门大学学科助教，拥有一年1v1教学经验，为本科及研究生提供人工智能方向的科研与项目指导，擅长整合分析知识点。"
+    },
+    {
+      "id": 7,
+      "name": "C学长",
+      "photo": "assets/images/c.png",
+      "school": "未知",
+      "tags": ["经济学", "理论讲解", "全方位辅导"],
+      "bio": "热爱社科问题思考，能够透过现象把握本质，凭借扎实专业知识和丰富教学经验，为学生提供全面精准的指导。"
+    },
+    {
+      "id": 8,
+      "name": "涛涛学长",
+      "photo": "assets/images/taotao.png",
+      "school": "墨尔本/ LSE",
+      "tags": ["金融建模", "Python", "统计学"],
+      "bio": "毕业于墨尔本和LSE，获得墨大国际生奖学金，拥有4年以上1v1及大课经验，擅长将商科知识点与实际案例相结合，精通金融和统计建模。"
+    },
+    {
+      "id": 9,
+      "name": "Freya学姐",
+      "photo": "assets/images/freya.png",
+      "school": "未知",
+      "tags": ["雅思", "英语补习"],
+      "bio": "雅思7.5分、口语7分，具有多人和1v1英语补习教学经验，擅长带领学生进行阅读和口语冲刺。"
+    },
+    {
+      "id": 10,
+      "name": "Olson学长",
+      "photo": "assets/images/olson.png",
+      "school": "Monash经济学博士在读",
+      "tags": ["经济计量", "1v1辅导"],
+      "bio": "Monash经济学博士在读，拥有丰富的1v1教学经验，擅长传授高分经验以及进行经济理论与实验研究。"
+    },
+    {
+      "id": 11,
+      "name": "查理学长",
+      "photo": "assets/images/charlie.png",
+      "school": "Monash",
+      "tags": ["经济学院助教", "计量经济"],
+      "bio": "Monash Hons奖学金获得者，PhD全奖，具备2年大班课教学经验，专注于本科宏观及计量经济课程的辅导。"
+    },
+    {
+      "id": 12,
+      "name": "阿宇学长",
+      "photo": "assets/images/ayu.png",
+      "school": "西南财经大学",
+      "tags": ["会计", "财务管理"],
+      "bio": "专业第一保研，曾获得国家奖学金，拥有西财中级财务会计助教经验，基础扎实，通过注册会计师、税务师和初级会计师考试。"
+    },
+    {
+      "id": 13,
+      "name": "S学姐",
+      "photo": "assets/images/s.png",
+      "school": "Monash经济系",
+      "tags": ["微观经济", "宏观经济", "计量经济"],
+      "bio": "一等毕业，曾获得多项奖学金和奖章，担任Monash经济系助教，擅长微观、宏观和计量经济学教学。"
+    }
+  ]
+  

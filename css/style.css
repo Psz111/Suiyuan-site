@@ -1,47 +1,260 @@
-/* 封面样式 */
-.cover-section {
+/* 定义全局变量，依据 PPT 中提取的设计元素（颜色、字体等） */
+:root {
+    --primary-color: #003366;     /* PPT 中的主色 */
+    --secondary-color: #006699;   /* 辅助色 */
+    --bg-color: #f8f9fa;
+    --text-color: #333;
+    --font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  
+  /* 全局基础设置 */
+  body {
+    font-family: var(--font-family-base);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+  }
+  
+  /* 导航栏样式 */
+  .navbar {
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .navbar-brand img {
+    width: 150px;
+    height: auto;
+  }
+  .brand-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  /* 封面区 */
+  .cover-section {
     position: relative;
     width: 100%;
-    height: 80vh; /* 可视区域高度的80% */
+    height: 80vh;
     overflow: hidden;
-}
-
-.cover-svg {
+  }
+  .cover-svg {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 保持SVG比例填充 */
-}
-
-/* 移动端优化 */
-@media (max-width: 768px) {
-    .cover-section {
-        height: 60vh;
-    }
-}
-
-.stats {
-    display: flex;
-    gap: 3rem;
-    margin-top: 2rem;
-}
-
-.stat-number {
-    font-size: 3rem;
-    font-weight: 700;
-}
-
-.card-img-top {
-    height: 300px;
     object-fit: cover;
-    border-radius: 0.5rem 0.5rem 0 0;
-}
-
-@media (max-width: 768px) {
-    .stats {
-        flex-direction: column;
-        gap: 1.5rem;
+  }
+  .cover-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    border-radius: 8px;
+  }
+  .cover-overlay h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  .cover-overlay p {
+    font-size: 1.25rem;
+  }
+  
+  /* 教师团队模块 */
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  /* 教师卡片样式 */
+  .teacher-card {
+    max-width: 350px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+  }
+  .teacher-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  .card-img-top {
+    height: 200px;
+    object-fit: contain;
+    background-color: #fff;
+  }
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  .card-text {
+    font-size: 1rem;
+    color: var(--text-color);
+  }
+  .tags .badge {
+    font-size: 0.9rem;
+    background-color: var(--secondary-color);
+  }
+  .extra-info {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    transition: max-height 0.3s ease;
+  }
+  
+  /* -------------------- 页脚整体样式 -------------------- */
+  .footer {
+    background-color: #f4f4f4;  /* 柔和的浅灰色背景 */
+    color: #555;              /* 深灰文字 */
+    padding: 40px 0;
+    border-top: 1px solid #ddd; /* 上边框区分主体 */
+  }
+  .footer .footer-section {
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  .footer h5 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .footer p {
+    font-size: 1rem;
+    margin: 0;
+    text-align: center;
+  }
+  
+  /* -------------------- 页脚列表样式 -------------------- */
+  .footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.95rem;
+    text-align: center;
+  }
+  .footer-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* 其他栏保持居中 */
+    gap: 10px;
+    min-height: 30px;
+  }
+  .footer-list li img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  /* -------------------- 联系我们部分的自定义样式 -------------------- */
+  .contact-list {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 250px;  /* 根据需要调整宽度 */
+  }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 50px;
+  }
+  .icon-container {
+    width: 50px; /* 固定图标容器宽度 */
+    display: inline-block;
+    text-align: center;
+  }
+  .contact-text {
+    flex: 1;
+    text-align: left;
+  }
+  
+  /* -------------------- 链接样式 -------------------- */
+  .footer-link {
+    color: #555;
+    text-decoration: none;
+  }
+  .footer-link:hover {
+    color: #000;
+  }
+  
+  /* -------------------- 第一栏：工作室 Logo -------------------- */
+  .footer-logo-container {
+    background-color: #fff;  /* 白色背景，确保 logo 清晰 */
+    display: inline-block;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  .footer-logo-img {
+    max-width: 200px;  /* 增大 logo 尺寸 */
+    height: auto;
+  }
+  
+  /* -------------------- 联系方式图标 -------------------- */
+  .contact-icon {
+    width: 50px;  /* 固定为 50px */
+    height: 50px;
+    object-fit: contain;
+  }
+  
+  /* -------------------- 第四栏：关注我们 – 微信和小红书悬停显示二维码 -------------------- */
+  .social-item {
+    position: relative;
+    display: inline-block;  /* 让容器仅包裹图标 */
+    cursor: pointer;
+    /* 去除 margin-bottom，因为每个项单独占一行 */
+  }
+  .social-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  /* 更新后的二维码样式：出现在图标右侧，与图标顶部居中 */
+  .qr-code {
+    position: absolute;
+    top: 50%;                       /* 垂直居中 */
+    left: calc(100% + 1px);         /* 紧挨图标右侧，5px 间距 */
+    transform: translateY(-50%) scale(0.8); /* 初始缩小并居中 */
+    background: #fff;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+  }
+  .social-item:hover .qr-code {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+  .qr-code img {
+    max-width: 200px;             /* 增大二维码尺寸 */
+    height: auto;
+  }
+  
+  /* -------------------- 分隔线 -------------------- */
+  .footer-divider {
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+  }
+  
+  /* -------------------- 关于我们部分调整 -------------------- */
+  .footer-list.about-list li {
+    margin-bottom: 20px;  /* 增加行间距 */
+    line-height: 1.8;     /* 调整文本行间距 */
+  }
+  
+  /* -------------------- 响应式调整 -------------------- */
+  @media (max-width: 768px) {
+    .cover-overlay h1 {
+      font-size: 2rem;
     }
-    .stat-number {
-        font-size: 2rem;
+    .cover-overlay p {
+      font-size: 1rem;
     }
-}
+  }
+  
